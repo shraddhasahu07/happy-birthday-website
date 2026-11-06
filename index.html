@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f5">
+  <title>A little something for you ♡</title>
+  <style>
+    :root{--ink:#4b3040;--muted:#806c79;--pink:#e9799b;--rose:#fff4f5;--cream:#fffaf0;--plum:#713b61}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 15%,#ffe4ec 0,transparent 35%),radial-gradient(circle at 88% 85%,#f6e5f5 0,transparent 36%),linear-gradient(135deg,#fffaf0,#fff2f5);color:var(--ink);font-family:Georgia,'Times New Roman',serif;display:grid;place-items:center;padding:22px;overflow-x:hidden}
+    .sparkles{position:fixed;inset:0;pointer-events:none;opacity:.34;background-image:radial-gradient(#d67a98 1px,transparent 1px);background-size:27px 27px;mask-image:linear-gradient(transparent,black 20%,black 80%,transparent)}
+    .card{position:relative;width:min(100%,720px);min-height:510px;padding:clamp(28px,7vw,64px);border:1px solid #fff;border-radius:28px;background:rgba(255,255,255,.82);box-shadow:0 24px 80px #8e52621c;display:flex;flex-direction:column;justify-content:center;animation:arrive .65s ease both}
+    @keyframes arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .topline{font:600 .75rem/1.4 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#b56b83;margin-bottom:20px}.page{display:none}.page.active{display:block;animation:arrive .55s ease both}h1{font-size:clamp(2.4rem,8vw,4.7rem);line-height:1.04;font-weight:500;letter-spacing:-.04em;margin:0 0 22px;color:var(--plum)}h2{font-size:clamp(2rem,6vw,3rem);line-height:1.12;font-weight:500;margin:0 0 22px;color:var(--plum)}p{font-size:clamp(1.05rem,2.7vw,1.25rem);line-height:1.8;margin:0 0 16px;white-space:pre-line}.lead{font-size:clamp(1.15rem,3vw,1.45rem);color:var(--muted)}.heart{color:var(--pink)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.button{border:0;border-radius:999px;padding:13px 22px;background:var(--plum);color:white;font:600 .95rem system-ui,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}.button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #713b6133}.button.secondary{color:var(--plum);background:#f8e9ef}.button.music{background:#fff0f4;color:#8f4561}.button:focus-visible{outline:3px solid #e9799b;outline-offset:3px}.music-row{display:flex;align-items:center;gap:12px;margin-top:24px;font: .84rem system-ui,sans-serif;color:var(--muted)}.music-note{font-size:.82rem}.footer{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding-top:18px;border-top:1px solid #f1e5e9;font: .8rem system-ui,sans-serif;color:#9b8490}.progress{height:4px;background:#f5e8ed;border-radius:5px;margin-top:16px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#d77999,#b76c9d);transition:width .35s}.no-btn{position:relative}.hidden{display:none!important}.birthday{color:#b34e75}.small{font-size:.96rem;color:var(--muted)}
+    @media(max-width:520px){body{padding:12px}.card{min-height:calc(100vh - 24px);padding:30px 24px;border-radius:22px}.footer{margin-top:24px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+  <main class="card" aria-live="polite">
+    <section class="page active" data-track="love-you-zindagi.mp3">
+      <div class="topline">A little something for you <span class="heart">♡</span></div>
+      <h1>Do you want to open your birthday surprise?</h1>
+      <p class="lead">A little surprise for someone who became important in the most unexpected way.</p>
+      <div class="actions"><button class="button" id="yesBtn">Yes, open it ♡</button><button class="button secondary no-btn" id="noBtn">No</button></div>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Love You Zindagi</span></div>
+    </section>
+    <section class="page" data-track="jaane-kyun.mp3">
+      <div class="topline">Page 2 · How it started</div><h2>How it started</h2>
+      <p>We weren't really that close during our school days. But life has its own way of introducing people who eventually become important.</p>
+      <p>I never expected that someone I knew from school would become one of the people I could depend on so much.</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Jaane Kyun (Dostana)</span></div>
+    </section>
+    <section class="page" data-track="girls-like-to-swing.mp3">
+      <div class="topline">Page 3 · My unpaid therapist</div><h2>My unpaid therapist</h2>
+      <p>Honestly, where do I even begin?</p>
+      <p>Thank you for listening to my endless stories, handling my overthinking, giving me advice and being there whenever things weren't going right.</p>
+      <p>You're basically my personal therapist, life coach and guidance counsellor — all without charging a single rupee. 😂</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Girls Like To Swing</span></div>
+    </section>
+    <section class="page" data-track="count-on-me.mp3">
+      <div class="topline">Page 4 · A little appreciation</div><h2>A little appreciation</h2>
+      <p>You probably don't realise how much your small efforts mean.</p>
+      <p>That one message, your reassurance, your advice and especially your words, "Don't worry, I'll always be there for you."</p>
+      <p>I hope you know that I genuinely appreciate all of it.</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Count on Me (Bruno Mars)</span></div>
+    </section>
+    <section class="page" data-track="gallan-goodiyaan.mp3">
+      <div class="topline">Page 5 · The roasting department</div><h2>The roasting department</h2>
+      <p>Now let's talk about your favourite hobby: MY BREAKUP. 😭</p>
+      <p>Madam, kitna roast karegi mujhe? Koi naya topic nahi milta kya?</p>
+      <p>Mera breakup tha, tumhara lifetime entertainment package nahi. 😂</p>
+      <p>But honestly, keep your sense of humour. It makes our conversations memorable.</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Gallan Goodiyaan</span></div>
+    </section>
+    <section class="page" data-track="tenu-sang-rakhna.mp3">
+      <div class="topline">Page 6 · A letter</div><h2>A letter</h2>
+      <p>I know we didn't share a very close bond in school, but I'm genuinely glad that we got closer afterwards.</p>
+      <p>You came into my life at a time when I needed someone to listen, understand and guide me.</p>
+      <p>Thank you for never making me feel silly for asking questions or sharing my problems.</p>
+      <p>Thank you for supporting me, encouraging me and reminding me to keep going.</p>
+      <p>I hope I can be even a little bit of the support for you that you have been for me.</p>
+      <p>And please, never stop following your passions. You deserve to achieve everything you've been working towards.</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Tenu Sang Rakhna</span></div>
+    </section>
+    <section class="page" data-track="atrangi-yaari.mp3">
+      <div class="topline">Page 7 · For your 19th birthday</div><h2 class="birthday">Happy 19th! <span class="heart">♡</span></h2>
+      <p>Here's wishing you a year full of happiness, success, peace, good opportunities and beautiful memories.</p>
+      <p>May you meet people who appreciate you, support your dreams and care for you just as genuinely as you care for others.</p>
+      <p>Keep growing, keep shining and keep being yourself.</p>
+      <p><strong>Happy 19th Birthday!</strong></p>
+      <p>And yes, your unpaid therapist subscription is renewed for another year. 😂❤️</p>
+      <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Atrangi Yaari</span></div>
+    </section>
+    <footer class="footer"><button class="button secondary hidden" id="backBtn">← Back</button><span id="pageCount">Welcome</span><button class="button hidden" id="nextBtn">Next →</button></footer>
+    <div class="progress" aria-label="Story progress"><span id="progressBar" style="width:14.285%"></span></div>
+  </main>
+  <audio id="audio" preload="none"></audio>
+  <script>
+    (()=>{
+      const pages=[...document.querySelectorAll('.page')],audio=document.getElementById('audio');
+      const yes=document.getElementById('yesBtn'),no=document.getElementById('noBtn'),back=document.getElementById('backBtn'),next=document.getElementById('nextBtn'),count=document.getElementById('pageCount'),bar=document.getElementById('progressBar');
+      let current=0,playing=false;
+      function stopMusic(){audio.pause();audio.currentTime=0;playing=false;document.querySelectorAll('[data-music]').forEach(b=>b.textContent='♫ Play music')}
+      function show(i){stopMusic();current=Math.max(0,Math.min(pages.length-1,i));pages.forEach((p,n)=>p.classList.toggle('active',n===current));back.classList.toggle('hidden',current===0);next.classList.toggle('hidden',current===0||current===pages.length-1);count.textContent=current===0?'Welcome':`Page ${current+1} of ${pages.length}`;bar.style.width=`${((current+1)/pages.length)*100}%`;window.scrollTo({top:0,behavior:'smooth'})}
+      yes.addEventListener('click',()=>show(1));next.addEventListener('click',()=>show(current+1));back.addEventListener('click',()=>show(current-1));
+      no.addEventListener('pointerenter',()=>{const r=no.getBoundingClientRect();no.style.position='fixed';no.style.left=Math.max(12,Math.random()*(innerWidth-r.width-24))+'px';no.style.top=Math.max(12,Math.random()*(innerHeight-r.height-24))+'px'});
+      no.addEventListener('click',()=>{no.textContent='Are you sure?';setTimeout(()=>no.textContent='No',900)});
+      document.querySelectorAll('[data-music]').forEach(btn=>btn.addEventListener('click',async()=>{if(playing){stopMusic();return}const file=pages[current].dataset.track;audio.src=file;try{await audio.play();playing=true;btn.textContent='♫ Pause music'}catch{btn.textContent='♫ Audio not found';setTimeout(()=>{if(!playing)btn.textContent='♫ Play music'},1800)}}));
+      audio.addEventListener('ended',()=>{playing=false;document.querySelectorAll('[data-music]').forEach(b=>b.textContent='♫ Play music')});
+    })();
+  </script>
+</body>
+</html>
