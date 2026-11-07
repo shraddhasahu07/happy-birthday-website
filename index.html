@@ -13,7 +13,8 @@
     @keyframes arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .topline{font:600 .75rem/1.4 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#b56b83;margin-bottom:20px}.page{display:none}.page.active{display:block;animation:arrive .55s ease both}h1{font-size:clamp(2.4rem,8vw,4.7rem);line-height:1.04;font-weight:500;letter-spacing:-.04em;margin:0 0 22px;color:var(--plum)}h2{font-size:clamp(2rem,6vw,3rem);line-height:1.12;font-weight:500;margin:0 0 22px;color:var(--plum)}p{font-size:clamp(1.05rem,2.7vw,1.25rem);line-height:1.8;margin:0 0 16px;white-space:pre-line}.lead{font-size:clamp(1.15rem,3vw,1.45rem);color:var(--muted)}.heart{color:var(--pink)}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.button{border:0;border-radius:999px;padding:13px 22px;background:var(--plum);color:white;font:600 .95rem system-ui,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}.button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #713b6133}.button.secondary{color:var(--plum);background:#f8e9ef}.button.music{background:#fff0f4;color:#8f4561}.button:focus-visible{outline:3px solid #e9799b;outline-offset:3px}.music-row{display:flex;align-items:center;gap:12px;margin-top:24px;font: .84rem system-ui,sans-serif;color:var(--muted)}.music-note{font-size:.82rem}.footer{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding-top:18px;border-top:1px solid #f1e5e9;font: .8rem system-ui,sans-serif;color:#9b8490}.progress{height:4px;background:#f5e8ed;border-radius:5px;margin-top:16px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#d77999,#b76c9d);transition:width .35s}.no-btn{position:relative}.hidden{display:none!important}.birthday{color:#b34e75}.small{font-size:.96rem;color:var(--muted)}
-    @media(max-width:520px){body{padding:12px}.card{min-height:calc(100vh - 24px);padding:30px 24px;border-radius:22px}.footer{margin-top:24px}}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 10px}.photo-card{background:#fff7f9;border:1px solid #f3dfe8;border-radius:18px;overflow:hidden;box-shadow:0 10px 22px rgba(117,67,87,.08)}.photo-card img{display:block;width:100%;height:160px;object-fit:cover}.photo-caption{padding:8px 10px;text-align:center;font:600 .72rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#956f82}
+    @media(max-width:520px){body{padding:12px}.card{min-height:calc(100vh - 24px);padding:30px 24px;border-radius:22px}.footer{margin-top:24px}.photo-grid{grid-template-columns:1fr}.photo-card img{height:200px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
 </head>
@@ -72,6 +73,20 @@
       <p>Keep growing, keep shining and keep being yourself.</p>
       <p><strong>Happy 19th Birthday!</strong></p>
       <p>And yes, your unpaid therapist subscription is renewed for another year. 😂❤️</p>
+      <div class="photo-grid" aria-label="Photo memories">
+        <figure class="photo-card">
+          <img src="photos/photo-1.svg" alt="Our memory 1">
+          <figcaption class="photo-caption">Memory 1</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="photos/photo-2.svg" alt="Our memory 2">
+          <figcaption class="photo-caption">Memory 2</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="photos/photo-3.svg" alt="Our memory 3">
+          <figcaption class="photo-caption">Memory 3</figcaption>
+        </figure>
+      </div>
       <div class="music-row"><button class="button music" data-music>♫ Play music</button><span class="music-note">Atrangi Yaari</span></div>
     </section>
     <footer class="footer"><button class="button secondary hidden" id="backBtn">← Back</button><span id="pageCount">Welcome</span><button class="button hidden" id="nextBtn">Next →</button></footer>
